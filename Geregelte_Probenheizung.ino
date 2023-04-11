@@ -131,12 +131,13 @@ void loop() {
                         if((isTemp<shouldTemp)&&((stoppHeatingTemp-isTemp)<8)){
                           status = SOFTHEATING;
                         }
-                        if((shouldTemp-isTemp)<=1.4){
+                        if(isTemp>shouldTemp){
+                          digitalWrite(HEATINGCARTRIDGE, HIGH);
+                          status = COOLING;
+                        }
+                        if(((shouldTemp-isTemp)>=-0.4)&&(shouldTemp-isTemp)<=1.4){
                           status = REGULATING;
                           updateStatusLamp(GREEN);
-                        }
-                        if(isTemp>shouldTemp){
-                          status = COOLING;
                         }
     break;
     case HEATING:       if(isTemp>=stoppHeatingTemp){

@@ -2,7 +2,7 @@
 
 Firmware für eine **geregelte Heizpatrone mit Touchscreen-Bedienung**, entwickelt für ein ESP32-Mikrocontrollerboard. Das System misst die Ist-Temperatur über einen Pt1000-Widerstandssensor, vergleicht sie mit einer über Touchscreen einstellbaren Soll-Temperatur und regelt die Heizpatrone entsprechend – inklusive Statusanzeige, akustischem Signal und Speicherung des Sollwerts im EEPROM.
 
-Das Projekt entstand im Rahmen einer IPA (Individuelle Praktische Arbeit)
+Das Projekt entstand im Rahmen einer IPA (Individuelle Praktische Arbeit).
 
 ## Funktionsweise
 
